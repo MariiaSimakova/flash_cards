@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+.header{
+    background-color: rgb(245, 237, 226);
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rem 5rem 0rem 5rem;
+    padding: 1rem 0rem 1rem 0rem;
+    font-family: Inter;
+    font-size: 2rem;
+}
+a,
+li {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    cursor: pointer;
+}
+a:hover {
+    color: rgb(59, 61, 60);
+}
+
+

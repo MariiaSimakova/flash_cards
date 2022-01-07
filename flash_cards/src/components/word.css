@@ -1,0 +1,18 @@
+.buttonContainer{
+    display: flex;
+}
+.buttonDelete,
+.buttonEdit,
+.buttonSave {
+    font-size: 2rem;
+}
+
+.buttonDelete {
+    color: rgb(221, 0, 0);
+}
+.buttonEdit{
+    color: rgb(231, 152, 4);
+}
+.buttonSave{
+    color: green;
+}
