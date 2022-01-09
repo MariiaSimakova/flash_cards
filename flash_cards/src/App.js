@@ -11,7 +11,7 @@ function App() {
     <>
           <Header />
           <main className="main">
-            <Card />
+            <Card {...data[5]} />
             <VocabList/>
           </main>
           <Footer />
