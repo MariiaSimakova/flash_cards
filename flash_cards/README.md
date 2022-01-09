@@ -2,3 +2,10 @@ Week 27:
 
 ![image](https://user-images.githubusercontent.com/84888389/148535488-30b170da-93c8-40a1-bb60-e1d2f8341579.png)
 
+Week 28
+
+![week28-2](https://user-images.githubusercontent.com/84888389/148673359-51f0dce6-c197-439d-8222-77811a3e0c32.gif)
+
+![week28_](https://user-images.githubusercontent.com/84888389/148673413-166bc795-face-4277-8c3f-893d3ceca987.gif)
+
+
