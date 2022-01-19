@@ -1,12 +1,18 @@
-.buttonContainer{
-    display: flex;
+button{
+    border: 0;
+    padding: 0;
+    background-color: transparent;
 }
+/* .buttonContainer{
+    display: flex;
+} */
 .buttonDelete,
 .buttonEdit,
 .buttonSave,
 .buttonCancel {
     font-size: 2rem;
     cursor: pointer;
+    margin-right: 0.5rem;
 }
 
 .buttonDelete {

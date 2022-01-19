@@ -1,18 +1,18 @@
 import './App.css';
 import React from "react";
 import data from './data';
-import Header from './components/Header';
-import VocabList from './components/VocabList';
-import Card from './components/Сard';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import VocabList from './components/VocabList/VocabList';
+import Footer from './components/Footer/Footer';
+import CardList from './components/CardList/CardList';
 
 function App() {
   return (
     <>
           <Header />
           <main className="main">
-            <Card {...data[5]} />
-            <VocabList/>
+            <CardList data={data} />
+            <VocabList data={data} />
           </main>
           <Footer />
     </>

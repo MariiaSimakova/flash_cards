@@ -1,7 +1,7 @@
 import React from "react";
-import '../components/vocabList.css'
-import data from "../data.js";
-import Word from "./Word";
+import '../VocabList/vocabList.css'
+import data from "../../data.js";
+import Word from "../Word/Word";
 
 
 function VocabList () {

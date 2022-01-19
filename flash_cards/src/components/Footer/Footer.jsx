@@ -1,6 +1,6 @@
 import React from "react";
-import "../components/footer.css"
-import gitHubLogo from '../components/github.png'
+import "../Footer/footer.css"
+import gitHubLogo from '../Footer/github.png'
 
 function Footer () {
     return (

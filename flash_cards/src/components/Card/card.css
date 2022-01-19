@@ -6,16 +6,20 @@ justify-content: center;
 align-content: center;
 }
 .card{
-    display: flex;
+display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-width: 43.75rem;
-height: 25rem;
-border: solid 1px black;
-background-color: white;
 font-family: 'Inter', sans-serif;
-margin: 2rem;
+text-align: center;
+min-width: 24.75rem;
+margin-top: 3rem;
+margin-bottom: 0.7rem;
+padding: 2rem;
+border-radius: 3px;
+box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
+background-color: #fff;
+transition: all 100ms ease-in-out;
 }
 .englishWord{
     font-size: 3rem;
@@ -23,7 +27,7 @@ margin: 2rem;
 }
 .russianWord{
     font-size: 3rem;
-    color: green;
+    color: #2ab4a4;
 
 }
 .transcription{

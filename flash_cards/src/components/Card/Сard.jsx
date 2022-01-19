@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Button from '@mui/material/Button';
-import './card.css'
+import '../Card/card.css';
 
 function Card ({english, transcription, russian, tags, id}) {
     const [initialCard, showTranslation] = useState(true);
@@ -8,6 +8,11 @@ function Card ({english, transcription, russian, tags, id}) {
     function onClick() {
         showTranslation(false);
     }
+
+    // сброс состояния к начальному для того, чтобы кнопка "Проверить" отображалась на след карточках
+    useEffect(() => {
+        showTranslation(true);
+    }, [id]);
 
     return(
         <div className="wrapper">
