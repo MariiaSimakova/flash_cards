@@ -1,3 +1,10 @@
+Week 30:
+
+![week30_2](https://user-images.githubusercontent.com/84888389/150482088-834434fc-faa4-4d34-8625-1c0ce6196470.gif)
+
+![week30_1](https://user-images.githubusercontent.com/84888389/150482102-ff7bc2fe-e7c5-42b2-9f65-ef96d9dee25a.gif)
+
+
 Week 29:
 
 ![week29_2](https://user-images.githubusercontent.com/84888389/150095168-efe41ebb-87a9-49d9-9133-b04ed05ba2ab.gif)
