@@ -1,15 +1,18 @@
+.table__wrapper{
+	display: flex;
+	justify-content: center;
+}
 .table {
-	width: 100%;
 	border: none;
-	margin-bottom: 20px;
+	margin: 1.5rem;
 }
 .table thead th {
 	font-weight: bold;
 	text-align: left;
 	border: none;
-	padding: 10px 15px;
+	padding: 0.625rem 0.9375rem;
 	background: #d8d8d8;
-	font-size: 14px;
+	font-size: 1.3rem;
 	border-left: 1px solid #ddd;
 	border-right: 1px solid #ddd;
 }
@@ -17,8 +20,8 @@
 	text-align: left;
 	border-left: 1px solid #ddd;
 	border-right: 1px solid #ddd;
-	padding: 10px 15px;
-	font-size: 14px;
+	padding: 0.625rem 0.9375rem;
+	font-size: 1.1rem;
 	vertical-align: top;
 }
 .table thead tr th:first-child, .table tbody tr td:first-child {

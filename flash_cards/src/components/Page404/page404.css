@@ -1,0 +1,15 @@
+.page404__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+.page404__title{
+    font-size: 2rem;
+    color: #2ab4a4;
+    margin-bottom: 2rem;
+}
+img{
+    max-width: 70%;
+    margin-bottom: 4rem;
+}

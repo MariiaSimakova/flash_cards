@@ -5,6 +5,8 @@ import {useState} from "react";
 import '../CardList/cardList.css'
 import YouDidIt from '../CardList/YouDidIt.jpg'
 
+
+
 export default function CardList({data}) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -17,7 +19,7 @@ export default function CardList({data}) {
     }
 
 
-    if (currentIndex ===data.length) {
+    if (currentIndex === data.length) {
         return <div className="final__card">
             <h3 className="final__card-title">You did it!</h3>           
             <img className="final__card-img" src={YouDidIt} alt="You did it!" />

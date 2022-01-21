@@ -9,10 +9,15 @@
   display: flex;
   flex-direction: column;
 } */
+/* body{
+} */
 .main {
+
   /* flex: 1 1 auto; */
   /* height: 70vh; */
-  background-color: #cfe3e6;
+  /* margin-top: 6rem;
+  margin-bottom: 0; */
+  background-color: #cfe3e600;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {

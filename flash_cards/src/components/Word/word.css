@@ -18,12 +18,25 @@ button{
 .buttonDelete {
     color: rgb(221, 0, 0);
 }
+.buttonDelete:hover {
+    color: rgb(173, 4, 4);
+}
 .buttonEdit{
     color: rgb(231, 152, 4);
+}
+.buttonEdit:hover{
+    color: rgb(209, 136, 0);
 }
 .buttonSave{
     color: green;
 }
+.buttonSave:hover{
+    color: rgb(0, 95, 0);
+}
+
 .buttonCancel{
     color: red
+}
+.buttonCancel:hover{
+    color: rgb(173, 4, 4);
 }

@@ -1,4 +1,6 @@
 .card__list{
+    /* меню */
+    /* margin-top: 3rem; */
     display: flex;
     align-content: center;
     justify-content: center;
@@ -32,4 +34,5 @@
     text-align: center;
     font-size: 1.4rem;
     padding-bottom: 1.4rem;
+    margin-bottom: 4rem;
 }
