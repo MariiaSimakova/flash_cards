@@ -22,15 +22,9 @@ function Layout () {
             <main className="main">
                 <Outlet />
             </main>
-
-
             <Footer />
-
-        </>
-
-
-    
+        </>   
     )   
 }
     
-    export default Layout;
+export default Layout;

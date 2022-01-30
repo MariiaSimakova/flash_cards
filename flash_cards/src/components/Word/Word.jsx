@@ -65,7 +65,6 @@ function Word ({english, transcription, russian, tags, id}) {
         changeEditMode(false);
     }
 
-
     if (!isEdited) {
         return(
             <tr>
@@ -95,9 +94,6 @@ function Word ({english, transcription, russian, tags, id}) {
             )
         }
     }
-        // <button className="buttonDelete"><RiDeleteBinLine /></button>
-        // <td className="buttonContainer">
-
 
 export default Word;
 
