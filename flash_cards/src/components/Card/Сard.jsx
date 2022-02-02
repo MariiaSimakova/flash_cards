@@ -1,19 +1,15 @@
-import React, {useEffect, useState, useRef, forwardRef} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import Button from '@mui/material/Button';
 import '../Card/card.css';
 
-const Card = forwardRef (({english, transcription, russian, tags, id}, countRef) => {
+const Card = (({english, transcription, russian, tags, id, wordProgress}) => {
     const [initialCard, showTranslation] = useState(true);
     const buttonRef = useRef(null);
 
 
     function onClick() {
         showTranslation(false);
-
-// ============================================
-countRef.current.wordProgress()
-// ============================================
-
+        wordProgress();
     }
 
     // сброс состояния к начальному для того, чтобы кнопка "Проверить" отображалась на след карточках
@@ -32,7 +28,6 @@ countRef.current.wordProgress()
 
     return(
         <div className="wrapper">
-            {/* <div ref={countRef}> You've learned: {setSelected.length} out of {data.length}</div> */}
             <div className="card">
                 <div className="englishWord">{english}</div>
                 <div className="transcription">{transcription}</div>
