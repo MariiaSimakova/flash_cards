@@ -1,3 +1,11 @@
+Week 31:
+
+![week31_2_](https://user-images.githubusercontent.com/84888389/152145402-eb062e80-e88e-4622-8eeb-4c1aa89f9dc3.gif)
+
+focus:
+![week31_1](https://user-images.githubusercontent.com/84888389/152145444-9f63a330-bea2-4c14-b665-d6b5b41cf226.gif)
+
+
 Week 30:
 
 ![week30_2](https://user-images.githubusercontent.com/84888389/150482088-834434fc-faa4-4d34-8625-1c0ce6196470.gif)
