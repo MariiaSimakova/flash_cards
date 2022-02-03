@@ -12,7 +12,6 @@ export default function CardList({data}) {
     const [selected, setSelected] = useState([]);
     
     let result = Math.round(selected.length/data.length*100);
-    console.log (result);
     
     function onNext(){
         setCurrentIndex (currentIndex + 1);

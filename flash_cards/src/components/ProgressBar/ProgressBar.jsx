@@ -5,14 +5,19 @@ export default function ProgressBar ({done}) {
 
     const [style, setStyle] = useState();
 
-        const newStyle = {
-            opacity: 1,
-            width: `${done}%`,
-        }
-
-        useEffect(() => {
+    useEffect(() => {
+        console.log("effect")
+        const timer = setTimeout(() => {
+            const newStyle = {
+                opacity: 1,
+                width: `${done}%`
+            }
             setStyle(newStyle);
-        });
+            console.log('Initial timeout!'); 
+        }, 1000);
+    
+        return () => clearTimeout(timer);
+    }, [done]);
 
     return (
         <>
