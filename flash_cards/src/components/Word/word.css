@@ -3,9 +3,7 @@ button{
     padding: 0;
     background-color: transparent;
 }
-/* .buttonContainer{
-    display: flex;
-} */
+
 .buttonDelete,
 .buttonEdit,
 .buttonSave,
@@ -39,4 +37,17 @@ button{
 }
 .buttonCancel:hover{
     color: rgb(173, 4, 4);
+}
+.error {
+	border: 2px solid red;
+}
+
+.deleteButtonSave {
+    visibility: hidden;
+}
+p {
+    color: #2ab4a4;
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0.2rem;
 }
