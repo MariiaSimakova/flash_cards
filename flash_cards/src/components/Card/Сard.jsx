@@ -2,14 +2,14 @@ import React, {useEffect, useState, useRef} from "react";
 import Button from '@mui/material/Button';
 import '../Card/card.css';
 
-const Card = (({english, transcription, russian, tags, id, wordProgress}) => {
+const Card = (({english, transcription, russian, tags, id, onWordProgress}) => {
     const [initialCard, showTranslation] = useState(true);
     const buttonRef = useRef(null);
 
 
     function onClick() {
         showTranslation(false);
-        wordProgress();
+        onWordProgress();
     }
 
     // сброс состояния к начальному для того, чтобы кнопка "Проверить" отображалась на след карточках

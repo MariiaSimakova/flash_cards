@@ -73,7 +73,7 @@ function Word ({english, transcription, russian, tags, id}) {
         if (Object.keys(formErrors).length === 0 && isSubmit){
             console.log(word);
         }
-    }, [formErrors])
+    }, [formErrors, isSubmit, word])
     
     let engRegExp = /^[a-z\s]+$/i;
     let rusRegExp = /^[а-я\s]+$/i;

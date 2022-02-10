@@ -28,7 +28,7 @@ export default function CardList({data}) {
             </div> ;
     } else {
         const id = data[currentIndex].id;
-        function wordProgress() {
+        function onWordProgress() {
             if (!selected.includes(id)) {
                 setSelected([...selected, id]);
             }
@@ -43,7 +43,7 @@ export default function CardList({data}) {
                 {currentIndex > 0 &&
                     <button onClick={onPrevious} className='buttonPrevious'><GrCaretPrevious /></button>
                 }
-                <Card wordProgress={wordProgress} {...data[currentIndex]} />
+                <Card onWordProgress={onWordProgress} {...data[currentIndex]} />
                 <button onClick={onNext} className='buttonNext'><GrCaretNext /></button>
                 </div>
             <div className='card__amount'>{currentIndex + 1} out of {data.length}</div>
