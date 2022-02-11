@@ -1,0 +1,11 @@
+.error {
+	outline: 2px solid red;
+}
+
+.error_title{
+	color: #2ab4a4;
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0.2rem;
+
+}

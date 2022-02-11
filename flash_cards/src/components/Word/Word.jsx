@@ -1,22 +1,21 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { FaEdit } from 'react-icons/fa';
 import { MdOutlineDownloadDone } from 'react-icons/md';
 import { ImCancelCircle } from 'react-icons/im';
 import '../Word/word.css'
 import '../VocabList/vocabList.css'
+import WordInput from "../WordInput/WordInput";
 
 
-function Word ({english, transcription, russian, tags, id}) {
+function Word({ english, transcription, russian, tags}) {
     const [isEdited, changeEditMode] = useState(false);
-    const [word, setWord] = useState({english, transcription, russian, tags});
-    const [formErrors, setFormErrors] = useState({});
-    const [isSubmit, setIsSubmit] = useState(false);
-    
+    const [word, setWord] = useState({ english, transcription, russian, tags });
+
     function onClickEdit() {
         changeEditMode(true);
     }
-    
+
     function onClickCancel() {
         changeEditMode(false);
         setWord({
@@ -27,121 +26,12 @@ function Word ({english, transcription, russian, tags, id}) {
         });
     }
 
-    function onChangeEnglish (evt) {
-        setWord({
-            english: evt.target.value,
-            russian: word.russian,
-            transcription: word.transcription,
-            tags: word.tags,
-        });
-    }
-
-    function onChangeRussian (evt) {
-        setWord({
-            russian: evt.target.value,
-            english: word.english,
-            transcription: word.transcription,
-            tags: word.tags,
-        });
-    }
-
-    function onChangeTranscription (evt) {
-        setWord({
-            english: word.english,
-            russian: word.russian,
-            transcription: evt.target.value, 
-            tags: word.tags,
-        });
-    }
-
-    function onChangeTags (evt) {
-        setWord({
-            english: word.english,
-            russian: word.russian,
-            transcription: word.transcription,
-            tags: evt.target.value, 
-        });
-    }
     function onSave() {
         changeEditMode(false);
-        setFormErrors(validate (word));
-        setIsSubmit(true);
-    }
-
-    useEffect(() => {
-        console.log(formErrors);
-        if (Object.keys(formErrors).length === 0 && isSubmit){
-            console.log(word);
-        }
-    }, [formErrors, isSubmit, word])
-    
-    let engRegExp = /^[a-z\s]+$/i;
-    let rusRegExp = /^[а-я\s]+$/i;
-    let tagsRegExp = /^[а-я\s]+$/i;
-    let transcriptionRegExp = /^[0-9\s]+$/;
-    const errors = {};
-
-    const validate = (values) => {
-        if (!values.english) {
-            errors.english = "This field cannot be empty!";
-        }
-        if (!values.russian) {
-            errors.russian = "This field cannot be empty!"
-        } 
-        if (!values.transcription) {
-            errors.transcription = "This field cannot be empty!"
-        } 
-        if (!values.tags) {
-            errors.tags = "This field cannot be empty!"
-        } 
-        return errors;
-    }
-
-    useEffect(()=> {
-        setFormErrors(validate (word));
-     }, [word]);
-    
-
-     let classNameButton = "buttonSave";
-     let classNameEnglish = "";
-     let classNameTranscription = ""; 
-     let classNameRussian = "";
-     let classNameTags = ""; 
- 
-     if (word.english.length === 0) {
-        classNameEnglish += " error";
-        classNameButton += " deleteButtonSave"
-     } else if(!engRegExp.test(word.english)){
-        errors.english = "English letters are only allowed!";
-        classNameButton += " deleteButtonSave"
-    }
-
-     if (word.transcription.length === 0) {
-        classNameTranscription += " error";
-        classNameButton += " deleteButtonSave"
-     } else if(transcriptionRegExp.test(word.transcription)){
-        errors.transcription = "Numbers are not allowed!";
-        classNameButton += " deleteButtonSave"
-    }
-
-     if (word.russian.length === 0) {
-        classNameRussian += " error";
-        classNameButton += " deleteButtonSave"
-     } else if(!rusRegExp.test(word.russian)){
-        errors.russian = "Russian letters are only allowed!";
-        classNameButton += " deleteButtonSave"
-    }
-
-     if (word.tags.length === 0) {
-        classNameTags += " error";
-        classNameButton += " deleteButtonSave"
-     } else if(!tagsRegExp.test(word.tags)){
-        errors.tags = "Russian letters are only allowed!";
-        classNameButton += " deleteButtonSave"
     }
 
     if (!isEdited) {
-        return(
+        return (
             <tr>
                 <td>{word.english}</td>
                 <td>{word.transcription}</td>
@@ -154,23 +44,23 @@ function Word ({english, transcription, russian, tags, id}) {
             </tr>
         );
     }
-        else {
-            return(
-                <>
-                    <tr >
-                        <td><p>{formErrors.english}</p><input className = {classNameEnglish} value={word.english} onChange={onChangeEnglish} /></td>
-                        <td><p>{formErrors.transcription}</p><input className = {classNameTranscription} value={word.transcription} onChange={onChangeTranscription} /></td>
-                        <td><p>{formErrors.russian}</p><input className = {classNameRussian} value={word.russian} onChange={onChangeRussian} /></td>
-                        <td><p>{formErrors.tags}</p><input className = {classNameTags} value={word.tags} onChange={onChangeTags} /></td>
-                        <td>
-                            <button onClick={onSave} className = {classNameButton}><MdOutlineDownloadDone /></button>
-                            <button onClick={onClickCancel} className="buttonCancel"><ImCancelCircle /></button>
-                        </td>
-                    </tr>
-                </>
-            )
-        }
+    else {
+        return (
+            <>
+                <tr >
+                    <td><WordInput value={word.english} regExpEng={new RegExp(/^[a-z\s]+$/i)} /></td>
+                    <td><WordInput value={word.transcription} regExpTranscription={new RegExp(/^[0-9\s]+$/)} /></td>
+                    <td><WordInput value={word.russian} regExpRus={new RegExp(/^[а-я\s]+$/i)} /></td>
+                    <td><WordInput value={word.tags} regExpTags={new RegExp(/^[а-я\s]+$/i)} /></td>
+                    <td>
+                        <button onClick={onSave} className="buttonSave" ><MdOutlineDownloadDone /></button>
+                        <button onClick={onClickCancel} className="buttonCancel"><ImCancelCircle /></button>
+                    </td>
+                </tr>
+            </>
+        )
     }
+}
 
 export default Word;
 
