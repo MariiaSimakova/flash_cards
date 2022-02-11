@@ -6,6 +6,16 @@ function WordInput(props) {
     const [value, setValue] = useState(props.value);
     const [error, setError] = useState("");
 
+
+    // сохраняю измененния при редактировании инпута
+    function onChangeInput (evt) {
+        setValue(evt.target.value);
+    }
+    console.log(value);
+    // 
+
+
+
     let className = "";
     if (error) {
         className += " error"
@@ -14,15 +24,12 @@ function WordInput(props) {
 
     function onChange (evt) {
         validate(evt.target.value);
-        console.log(value);
     }
     // передать value в родителя
-            console.log(value);
 
 
     function validate (inputValue) {
         setValue(inputValue);  
-        // console.log(inputValue);
 
         if (inputValue === "") {
             setError ('This field cannot be empty!');
@@ -52,7 +59,7 @@ function WordInput(props) {
     return(
         <>
             <div className="error_title">{error}</div>
-            <input className={className} value={value} onChange={onChange} />
+            <input className={className} value={value} onChange={onChange} onClick={onChangeInput} />
         </>
     );
 }
