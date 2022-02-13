@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { FaEdit } from 'react-icons/fa';
 import { MdOutlineDownloadDone } from 'react-icons/md';
@@ -6,11 +6,19 @@ import { ImCancelCircle } from 'react-icons/im';
 import '../Word/word.css'
 import '../VocabList/vocabList.css'
 import WordInput from "../WordInput/WordInput";
+import {WordsContext} from '../context/WordsContext'
 
 
 function Word({ english, transcription, russian, tags}) {
     const [isEdited, changeEditMode] = useState(false);
     const [word, setWord] = useState({ english, transcription, russian, tags });
+
+
+    // подписка на контекст для Consumer
+    // const {words} = useContext(WordsContext);
+    // console.log(getWords());
+
+
 
     function onClickEdit() {
         changeEditMode(true);

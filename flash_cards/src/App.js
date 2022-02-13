@@ -5,13 +5,14 @@ import data from './data';
 import Layout from '../src/components/Layout/Layout'
 import VocabList from './components/VocabList/VocabList';
 import CardList from './components/CardList/CardList';
-import Page404 from './components/Page404/Page404'
+import Page404 from './components/Page404/Page404';
+import {WordsContextProvider} from './components/context/WordsContext';
 
 
 function App() {
   return (
+    <WordsContextProvider>
       <BrowserRouter>
-        <>
           <Routes>
             <Route path="/" element={<Layout />}>
                 <Route path="home" element={<VocabList />}/>
@@ -22,8 +23,8 @@ function App() {
                 <Route index element={<VocabList />} />
               </Route>
           </Routes>
-        </>
       </BrowserRouter>
+    </WordsContextProvider>
   );
 }
 
